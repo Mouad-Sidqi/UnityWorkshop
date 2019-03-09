@@ -1,4 +1,4 @@
-##############################################################################################
+############################################################################################
 Create 2 variables:
 
                         // Rigidbody2D is a Component that controls physics(like Velocity, Gravity, Mass, etc..)
@@ -6,7 +6,7 @@ private Rigidbody2D rb; // Here, we created a Rigidbody2D-Type variable and we c
 
 private float speed; // (this is the variable that will controll how fast the character will move)
 
-_________________________________________________________________________________________________
+__________________________________________________________________________________________
 Result:
 
 
@@ -21,7 +21,7 @@ void Start () {                        // Start function is called only once; th
 }
 
 
-##############################################################################################
+###########################################################################################
 Now let's move the Player:
 
 void Update () {                       // Update function is called ~60 times every second(depending on the hardware).
