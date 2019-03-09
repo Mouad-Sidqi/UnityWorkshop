@@ -1,4 +1,4 @@
-####################################################################################################
+##############################################################################################
 Create 2 variables:
 
                         // Rigidbody2D is a Component that controls physics(like Velocity, Gravity, Mass, etc..)
@@ -21,7 +21,7 @@ void Start () {                        // Start function is called only once; th
 }
 
 
-####################################################################################################
+##############################################################################################
 Now let's move the Player:
 
 void Update () {                       // Update function is called ~60 times every second(depending on the hardware).
