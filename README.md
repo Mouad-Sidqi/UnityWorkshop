@@ -6,6 +6,7 @@ Create 2 variables:
 private Rigidbody2D rb; 
 
 // this is the variable that will controll how fast the character will move
+
 private float speed; 
 
 __________________________________________________________________________________________
