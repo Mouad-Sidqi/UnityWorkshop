@@ -4,7 +4,7 @@ Create 2 variables:
                         // Rigidbody2D is a Component that controls physics(like Velocity, Gravity, Mass, etc..)
                         // Here, we created a Rigidbody2D-Type variable and we called it "rb")
 private Rigidbody2D rb; 
-// (this is the variable that will controll how fast the character will move)
+// this is the variable that will controll how fast the character will move
 private float speed; 
 
 __________________________________________________________________________________________
