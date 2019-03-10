@@ -1,4 +1,4 @@
-Go to Scripts Folder through Assets->Scripts, Right click and create->"C# Script"
+Go to Scripts Folder through Assets->Scripts, Right click and create->"C# Script" and rename it PlayerM
 
 The script comes with two functions : Start and Update Functions.
 
@@ -13,6 +13,10 @@ Some Components are already present, like : Transform, Sprite Renderer, etc...
           Add the script to Player by draging and droping it into the Inspector.
   
 ############################################################################################
+Let's make the player move :
+
+Double click on the script and
+
 Create 2 variables:
 
                         // Rigidbody2D is a Component that controls physics(like Velocity, Gravity, Mass, etc..)
@@ -26,22 +30,25 @@ Create 2 variables:
 __________________________________________________________________________________________
 Result:
 
+          public class PlayerM : MonoBehaviour {
 
-private Rigidbody2D rb;
+                    private Rigidbody2D rb;
 
-private float speed;
-
-
-void Start () {                      
+                    private float speed;
 
 
-    speed = 10;                               // we initialized speed by 10
-    rb = GetComponent<Rigidbody2D>();         // we initialized rb variable with the player's Rigidbody2D
-}
+                    void Start () {                      
 
-void Update () { 
 
-}
+                        speed = 10;                               // we initialized speed by 10
+                        rb = GetComponent<Rigidbody2D>();         // we initialized rb variable with the player's Rigidbody2D
+                    }
+
+                    void Update () { 
+
+                    }
+
+          }
 
 
 ###########################################################################################
