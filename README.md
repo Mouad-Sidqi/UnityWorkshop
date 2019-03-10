@@ -5,6 +5,13 @@ The script comes with two functions : Start and Update Functions.
           Start function is called only once; that's when the game starts.
           Update function is called ~60 times every second(depending on the hardware).
 
+
+Click on "Player" gameObject that's present in the Hierarchy(top left menu). You can now see the "Components" of Player in Inspector(top right menu).
+
+Some Components are already present, like Transform, Sprite Renderer, etc...
+
+          Add the script to Player by draging and droping it into the Inspector.
+  
 ############################################################################################
 Create 2 variables:
 
