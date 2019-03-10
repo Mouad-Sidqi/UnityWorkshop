@@ -168,3 +168,31 @@ Go to Player's Script and add this following field above the variables you want 
     	private float jumpSpeed;
 
 You can now see these variables in the script that's attached to the Player and you can tweak them in-real-time.
+
+
+
+
+
+########################################################################################### ###########################################################################################
+
+
+Finally, let's make the camera follows the player by creating a new script, renaming it "CameraFollowPlayer" and attaching it to "Main Camera" in Hierarchy.
+
+	public class CameraFollowPlayer : MonoBehaviour {
+
+		private Transform camPos;
+		private Transform playerPos;
+
+		void Start () {
+			camPos = GetComponent<Transform>();
+			playerPos = FindObjectOfType<PlayerM>().transform;
+		}
+
+		void Update () {
+				
+			// we change the camera's x position to the player's x position and keep y and z the same, simple as that
+			
+			camPos.position = new Vector3(playerPos.position.x,  camPos.position.y, camPos.position.z) ; 
+				
+		}
+	}
