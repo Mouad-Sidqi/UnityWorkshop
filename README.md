@@ -54,14 +54,16 @@ Result:
 ###########################################################################################
 Now let's move the Player:
 
+we do this by changing velocity(the speed of something in a given direction).
+
 
           void Update () {                      
 
 
-              if (Input.GetKey(KeyCode.D))    
+              if (Input.GetKey(KeyCode.D) == true)    
                   rb.velocity = speed * Vector2.right;    // if the key pressed is "D" we change the velocity to = 10 * (1, 0). 
 
-              else if (Input.GetKey(KeyCode.A))
+              else if (Input.GetKey(KeyCode.A) == true)
                   rb.velocity = speed * Vector2.left;     // else it is changed to = 10 * (-1, 0).
           }
 
@@ -75,3 +77,43 @@ As you might have noticed, the player rotates when you try to move the him.
 To fix this, simply freeze the Rotation by clicking on "Player" and then click on :
 
     "RigidBody2D->Contraints->Freeze Rotation Z"
+    
+
+###########################################################################################
+
+If you try again you might notice that the gravity doesn't effect the Player as it should. that's because we keep resetting the y position.
+
+To fix this, let's change how we control his movements to
+
+
+         	void Update () {
+
+  
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.velocity.y);
+    }
+
+
+
+Now let's add a Jump to the Player by first creating a variable
+        
+        private float jumpSpeed;
+        
+        void Start () {
+                    rb = GetComponent<Rigidbody2D>();
+                    speed = 10;
+                    jumpSpeed = 10;
+        }
+	
+
+and then adding this condition to the script
+
+	void Update () {
+
+        if (Input.GetKeyDown(KeyCode.Space) == true)
+        {
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Mathf.Abs(rb.velocity.y + jumpSpeed));
+        }
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.velocity.y);
+    }
