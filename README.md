@@ -117,3 +117,21 @@ and then adding this condition to the script
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.velocity.y);
     }
+
+
+Change these values in Player's Rigidbody2D: (You can experiment with these value as much as you want.)
+	
+	Mass : 60
+	Linear Drag : 5
+	Gravity : 2
+
+You might want to change jumpSpeed variable which is hard-coded in the script, but there's a built in feature to make things easier
+
+Go to Player's Script and add this following field above the variables you want to tweak.
+
+	[SerializeField]
+    	private float speed;
+    	[SerializeField]
+    	private float jumpSpeed;
+
+You can now see these variables in the script that's attached to the Player and you can tweak them in-real-time.
