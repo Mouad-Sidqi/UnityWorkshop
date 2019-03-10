@@ -162,7 +162,7 @@ You might want to change jumpSpeed variable which is hard-coded in the script, b
 
 Go to Player's Script and add this following field above the variables you want to tweak.
 
-	[SerializeField]
+		[SerializeField]
     	private float speed;
     	[SerializeField]
     	private float jumpSpeed;
