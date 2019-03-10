@@ -55,15 +55,15 @@ Result:
 Now let's move the Player:
 
 
-void Update () {                      
+          void Update () {                      
 
 
-    if (Input.GetKey(KeyCode.D))    
-        rb.velocity = speed * Vector2.right;    // if the key pressed is "D" we change the velocity to = 10 * (1, 0). 
+              if (Input.GetKey(KeyCode.D))    
+                  rb.velocity = speed * Vector2.right;    // if the key pressed is "D" we change the velocity to = 10 * (1, 0). 
 
-    else if (Input.GetKey(KeyCode.A))
-        rb.velocity = speed * Vector2.left;     // else it is changed to = 10 * (-1, 0).
-}
+              else if (Input.GetKey(KeyCode.A))
+                  rb.velocity = speed * Vector2.left;     // else it is changed to = 10 * (-1, 0).
+          }
 
 __________________________________________________________________________________________
 Result :
