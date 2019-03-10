@@ -14,9 +14,15 @@ The script comes with two functions : Start and Update Functions.
 
 
 Click on "Player" gameObject that's present in the Hierarchy(top left menu).
+
+
+
 ![alt text](https://docs.unity3d.com/uploads/Main/Hierarchy.png)
 
 You can now see the "Components" of Player in Inspector(top right menu).
+
+
+
 ![alt text](https://docs.unity3d.com/uploads/Main/RigidBodyGO.png)
 
 Some Components are already present, like : Transform, Sprite Renderer, etc...
