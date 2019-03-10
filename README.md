@@ -76,11 +76,13 @@ Result:
           }
 
 
-
-
+#Click on Play!
+...And nothing happens.
 
 ###########################################################################################
 ###########################################################################################
+
+
 
 
 Now let's move the Player:
@@ -111,14 +113,14 @@ To fix this, simply freeze the Rotation by clicking on "Player" and then click o
     
 
 
-
+#Click on Play!
 
 
 ###########################################################################################
 ###########################################################################################
 
 
-If you try moving again you might notice that the gravity doesn't effect the Player as it should. that's because we keep resetting the y position.
+If you try moving again you might notice that the gravity doesn't effect the Player as it should. that's because we keep resetting the y position. i.e the 0 in "10 * (-1, 0)"
 
 To fix this, let's change how we control his movements to
 
@@ -161,6 +163,10 @@ and then adding this condition to the script
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.velocity.y);
     }
+
+
+
+#Click on Play!
 
 
 Change these values in Player's Rigidbody2D: (You can experiment with these value as much as you want.)
@@ -207,3 +213,68 @@ Finally, let's make the camera follows the player by creating a new script, rena
 				
 		}
 	}
+
+#Click on Play!
+
+
+
+
+
+########################################################################################### ###########################################################################################
+########################################################################################### ###########################################################################################
+
+
+
+
+
+
+
+
+
+
+Bonus:
+
+
+Let's animate our player!
+
+
+First  create a variable in PlayerM-Script with "SpriteRenderer" type as the following shows:
+
+	        private SpriteRenderer sR;
+
+Initialize in Start function it by
+
+	        sR = GetComponent<SpriteRenderer>();
+
+
+let's first flip the direction the player is facing depending on what direction we're pressing.
+add the following to Update function
+
+	if (Input.GetKey(KeyCode.A))
+            sR.flipX = true;
+        else if (Input.GetKey(KeyCode.D))
+            sR.flipX = false;
+	    
+#Click on Play!
+
+
+now add the following statements which will set a preconfigured Bool variable to false/true depending on if the Player is moving or not.
+
+	
+        if (Input.GetKey(KeyCode.A))
+        {
+            animationController.SetBool("Moving", true);
+            sR.flipX = true;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            animationController.SetBool("Moving", true);
+            sR.flipX = false;
+        }
+        else
+            animationController.SetBool("Moving", false);
+
+You can add/change different bool/float/int variables for different animations in Animator tab.
+
+#Click on Play!
+
