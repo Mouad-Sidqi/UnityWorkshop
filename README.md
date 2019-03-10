@@ -4,6 +4,7 @@ Clone the Repository and Open the folder using Unity
 
 ###########################################################################################
 ###########################################################################################
+Double Click on Assets->Scenes->SampleScene.
 
 Go to Scripts Folder through Assets->Scripts, Right click and create->"C# Script" and rename it PlayerM
 
