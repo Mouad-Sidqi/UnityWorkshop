@@ -19,6 +19,7 @@ private float speed;
 
 
   // Start function is called only once; that's when the game starts.
+
 void Start () {                      
 
 
@@ -31,6 +32,7 @@ void Start () {
 Now let's move the Player:
 
  // Update function is called ~60 times every second(depending on the hardware).
+
 void Update () {                      
 
 
