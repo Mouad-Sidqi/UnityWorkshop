@@ -115,6 +115,7 @@ To fix this, let's change how we control his movements to
     	}
 
 
+Input.GetAxis("Horizontal") is a value in the range -1...1 depending on if you're pressing: "A" or "D" || "LeftArrow" or "RightArrow"
 
 
 
